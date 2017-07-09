@@ -17,6 +17,7 @@ function updatePage(){
 	$("#options").empty();
 
 	for(i=0; i<buttons.length; i++){
+		
 		var btn = $("<button>");
 		btn.addClass("searchButton");
 		btn.text(buttons[i]).val();
@@ -30,7 +31,7 @@ updatePage();
 
 // jQuery that will create 10 gifs based on the button
 // data-value of this button.
-$(".searchButton").on("click", function(){
+$(document).on("click", ".searchButton", function(){
 	$("#gifList").empty();
 	console.log("Initial call of this on button click:")
 
