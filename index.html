@@ -28,12 +28,15 @@
 	<div class="container-fluid">
 		<div class="row">
 			<div class="col-md-8" id="options">
-				<!-- List of options will show up here -->
-				<!-- <button data-value="pitch perfect" class="searchButton">Pitch Perfect</button>
-				<button data-value="good will hunting" class="searchButton">Good Will Hunting</button> -->
+				
 			</div>
 			<div class="col-md-4" id="addOptions">
-				Here will be a textbox where the user can add new buttons to search for thier own GIF's
+				<form id="movie-form">
+				<label for="movie-input">Search for your own Gif's</label>
+				<input type="text" id="gif-input"><br>
+				<!-- Button triggers new movie to be added -->
+				<input id="add-gif" type="submit" value="Search for Gif">
+				</form>
 			</div>
 		</div>
 		<div class="row">

@@ -7,7 +7,7 @@ var buttons = ['Pitch Perfect',
 				'Cats', 
 				'Dogs', 
 				'Hamsters', 
-				'Help',];
+				'Help'];
 
 function updatePage(){
 
@@ -65,3 +65,11 @@ $(document).on("click", ".gif", function(){
 		$(this).attr("status", "still");
 	}// End If/Else
 });// End .gif onClick
+
+$("#add-gif").on("click", function(){
+	event.preventDefault();
+	var add = $("#gif-input").val().trim();
+	buttons.push(add);
+	console.log(add + " was added to your choices.")
+	updatePage();
+});
