@@ -9,22 +9,27 @@ var buttons = ['Pitch Perfect',
 				'Hamsters', 
 				'Help'];
 
+// Updates the page to show the buttons all of the strings
+// in the buttons[]
 function updatePage(){
+	console.log("Running updatePage Function")
 
 	$("#options").empty();
 
 	for(i=0; i<buttons.length; i++){
-		var btn = $("<button class='searchButton'>");
+		var btn = $("<button>");
+		btn.addClass("searchButton");
 		btn.text(buttons[i]).val();
 		btn.attr("data-value", buttons[i]);
 		$("#options").append(btn);
+		console.log(btn);
 	}
 }
 
-
 updatePage();
 
-
+// jQuery that will create 10 gifs based on the button
+// data-value of this button.
 $(".searchButton").on("click", function(){
 	$("#gifList").empty();
 	console.log("Initial call of this on button click:")
@@ -53,10 +58,10 @@ $(".searchButton").on("click", function(){
 	})// End AJAX
 })// End .searchButton On Click
 
+// jQuery that will toggle the gif between an
+// animated and still state
 $(document).on("click", ".gif", function(){
-
 	var state = $(this).attr("status");
-	
 	if(state === "still"){
 		$(this).attr("src", $(this).attr("animate-url"));
 		$(this).attr("status", "animate");
@@ -66,6 +71,8 @@ $(document).on("click", ".gif", function(){
 	}// End If/Else
 });// End .gif onClick
 
+// jQuery Event that Creates a new button
+// updates page to add the new button to the screen
 $("#add-gif").on("click", function(){
 	event.preventDefault();
 	var add = $("#gif-input").val().trim();
