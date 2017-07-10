@@ -17,7 +17,7 @@ function updatePage(){
 	$("#options").empty();
 
 	for(i=0; i<buttons.length; i++){
-		
+
 		var btn = $("<button>");
 		btn.addClass("searchButton");
 		btn.text(buttons[i]).val();
@@ -78,6 +78,7 @@ $("#add-gif").on("click", function(){
 	event.preventDefault();
 	var add = $("#gif-input").val().trim();
 	buttons.push(add);
-	console.log(add + " was added to your choices.")
+	console.log(add + " was added to your choices.");
+	$("#gif-input").val("");
 	updatePage();
 });

@@ -7,53 +7,60 @@
 	<!-- External Bootstrap Link -->
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
 
-	<!-- Bootstrap External Link -->
-
+	<!-- BootSwatch External Link -->
+	<link rel="stylesheet" href="https://bootswatch.com/solar/bootstrap.min.css">
 
 	<!-- CSS External Link -->
-
+	<link rel="stylesheet" href="assets/style/style.css">
 	<!-- jQuery External Link -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
 <body>
 
 	<!-- Header -->
+	<div class="bodyWrapper">	
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 text-center">
+						<h1>Hit my Giphy API Homework Assignment</h1>
+					</div>
+				</div>
+			</div>	
+		</div>
 
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-12 text-center">
-				<h1>Hit my Giphy API Homework Assignment</h1>
-			</div>
-		</div>		
-	</div>
+		<!-- Body -->
 
-	<!-- Body -->
-
-	<div class="container-fluid">
-		<div class="row">
-			<div class="col-md-8" id="options"></div>
-			<div class="col-md-4" id="addOptions">
-				<form id="gif-form">
-				<label for="gif-input">Search for your own Gif's</label>
-				<input type="text" id="gif-input"><br>
-				<!-- Button triggers new movie to be added -->
-				<input id="add-gif" type="submit" value="Search for Gif">
-				</form>
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8" id="options"></div>
+					<div class="col-md-4" id="addOptions">
+						<form id="gif-form">
+						<label for="gif-input">Search for your own Gif's</label>
+						<input type="text" id="gif-input"><br>
+						<!-- Button triggers new movie to be added -->
+						<input id="add-gif" type="submit" value="Search for Gif">
+						</form>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12 text-center" id="gifList">
+						Please click a button, or add a new button and see 10 GIF's appear here in this area
+					</div>
+				</div>
 			</div>
 		</div>
-		<div class="row">
-			<div class="col-md-12" id="gifList">
-				10 GIF's will show up here based on the button pressed 
-			</div>
-		</div>
 	</div>
-
 	<!-- Footer -->
-
-	<div class="container-fluid">
-		<p>&copy; Copyright 2017 Corey Stagner</p>
+	<div class="push"></div>
+	<div class="container-fluid footer">
+		<div class="container text-center footerContent">
+			<div class="copyright">
+				<p><strong>&copy; Copyright 2017 Corey Stagner</strong></p>
+			</div>
+		</div>
 	</div>
-
 	<!-- JavaScript External Link -->
 	<script src="assets/script/script.js"></script>
 </body>
